@@ -1,0 +1,60 @@
+@import 'src/styles/theme.scss';
+
+.experience-container {
+  padding: $spacingMedium;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: $border;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border;
+  }
+
+  .experience-header {
+
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: $textColor;
+  }
+
+  .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primaryColor;
+  }
+
+  .details {
+    color: $textColorLight;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .details ul {
+    list-style-type: disc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-left: 1.5rem;
+  }
+
+  .details ul li {
+    margin-bottom: 0.5rem;
+  }
+}

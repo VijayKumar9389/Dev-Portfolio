@@ -1,0 +1,77 @@
+@import 'src/styles/theme.scss';
+
+.app-container {
+    background-color: $backgroundColor;
+
+    .app-wrapper {
+        overflow: hidden;
+    }
+
+    .content {
+        padding: $spacingMedium;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px); /* Adjust the bounce height */
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .heading {
+        color: $secondaryColor;
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    .paragraph {
+        margin-bottom: $spacingLarge;
+        color: $textColor;
+        font-size: 18px;
+        @media (max-width: $mobileBreakpoint) {
+            font-size: 20px;
+        }
+    }
+
+    h1 {
+        color: $primaryColor;
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+
+    h4 {
+
+    }
+
+    h5 {
+
+    }
+
+    h6 {
+    }
+
+
+
+}
+
+// Paragraphs
+p {
+    font-size: 16px;
+    @media (max-width: $mobileBreakpoint) {
+        font-size: 18px;
+    }
+
+}

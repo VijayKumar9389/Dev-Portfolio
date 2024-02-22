@@ -1,0 +1,46 @@
+@import "src/styles/theme.scss";
+
+.skills-container {
+  padding: $spacingMedium;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.skills-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $spacingLarge;
+  margin-bottom: $spacingLarge;
+}
+
+.skill-card {
+  border-radius: $borderRadius;
+  border: $border;
+  padding: $spacingMedium;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $cardBackgroundColor;
+  box-shadow: $boxShadow;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: $primaryColor;
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $textColor;
+  margin-bottom: 0.5rem;
+}
+
+.skill-description {
+  font-size: 1rem;
+  color: $textColorLight;
+  text-align: center;
+}

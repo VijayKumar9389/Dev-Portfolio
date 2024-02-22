@@ -1,0 +1,44 @@
+@import 'src/styles/theme.scss';
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: linear-gradient(to bottom, $primaryColor, $backgroundColor);
+
+  color: $textColor;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
+  overflow: hidden;
+  padding: $spacingMedium; // Use medium spacing for padding
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.hero-content {
+  z-index: 1; /* Ensure content is above the image */
+  position: relative;
+  padding-top: 5rem;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
+  color: #fff;
+}
+
+.p-hero {
+  font-size: 1.5rem;
+  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
+  color: #fff;
+}
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  margin-left: $spacingLarge; // Use large spacing for left margin
+}

@@ -1,0 +1,50 @@
+@import 'src/styles/theme.scss';
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.marquee-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  animation: marquee 20s linear infinite; /* Adjust the animation duration as needed */
+}
+
+.marquee-item {
+  margin-right: 2rem; // Adjust the margin as needed
+}
+
+.services-card {
+  border-radius: $borderRadius;
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $textColor;
+
+  svg {
+    color: $primaryColor;
+  }
+}
+
+.services-icon {
+  font-size: 3rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
