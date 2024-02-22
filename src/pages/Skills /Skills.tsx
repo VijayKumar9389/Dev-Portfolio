@@ -2,7 +2,7 @@ import './Skills.scss';
 import { FaLock, FaDatabase, FaCloud, FaJava, FaPython, FaServer } from 'react-icons/fa';
 import {FaWeightScale} from "react-icons/fa6";
 import { AiOutlineRise } from 'react-icons/ai';
-import { SiTypescript, SiPrisma, SiGithub, SiJavascript } from 'react-icons/si';
+import { SiTypescript, SiPrisma, SiGithub } from 'react-icons/si';
 
 const Data = [
     {
