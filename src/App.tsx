@@ -6,7 +6,7 @@ import './styles/App.scss';
 import Experience from "./pages/Experience/Experience.tsx";
 import Navbar from "./components/Navbar/Navbar.tsx";
 import AOS from "aos";
-import 'aos/dist/aos.css'; // Import AOS CSS file
+import 'aos/dist/aos.css'; // Import AOS CSS fil
 import './styles/index.css';
 import {useEffect} from "react";
 import Contact from "./pages/Contact/Contact.tsx";
