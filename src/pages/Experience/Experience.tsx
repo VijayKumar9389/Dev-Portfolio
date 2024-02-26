@@ -9,8 +9,8 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
     {
-        year: '2015 - 2016',
-        title: 'Systems Trainee Internship',
+        year: 'May 2015 - Aug 2016',
+        title: 'Systems Trainee Internship (SGI)',
         details: [
             'Managed and prioritized tasks across multiple teams.',
             'Installed and configured Linux and Windows servers.',
@@ -19,8 +19,8 @@ const experienceData: ExperienceItem[] = [
         ],
     },
     {
-        year: '2016 - 2018',
-        title: 'Business Information Systems (Diploma)',
+        year: '2014 - 2016',
+        title: 'Business Information Systems (Two-Year Diploma)',
         details: [
             'Developed a full-stack web application using HTML, CSS, JavaScript, PHP, and MySQL.',
             'Gained expertise in Linux and Windows server administration.',
@@ -30,23 +30,25 @@ const experienceData: ExperienceItem[] = [
     },
     {
         year: '2018 - 2020',
-        title: 'Freelance Developer',
+        title: 'Developer (Contracts)',
         details: [
-            'Analyzed business requirements and presented design solutions to clients.',
-            'Created Java applications with user-friendly interfaces and SQLite database integration.',
-            'Contributed to game development using C# in Unity.',
-            "Designed a Java application to process stakeholder lists and generate organized Excel files.",
-            'Designed Python applications for data processing and integration tasks.',
+            'Led the development of a Java application for Cross Borders Drilling,\n' +
+            'employing Swing for the user interface and SQLite for data storage\n' +
+            'enabling efficient recording of drilled hole data',
+            'Contributed to game development using C# in Unity at Melcher Studios.',
+            "Designed Python and Java applications for data processing, \n" +
+            "integration tasks, and producing Excel reports at Triton Public Awareness.",
         ],
     },
     {
-        year: '2020 - Present',
-        title: 'Software Engineer',
+        year: '2018 - 2020',
+        title: 'Freelance Developer',
         details: [
-            'Develop high-quality full-stack web applications using React.js, Node.js, and Express.js.',
-            "Developed a secure CRUD (Create, Read, Update, Delete) application using React, Node.js, Express, and MySQL, focusing on safeguarding sensitive data.",
-            'Implement scalable features to meet evolving business needs.',
-            "Developed Relational database in Postgres using the Table per Hierarchy design to store data and associate it with different projects.",
+            'Engineered a responsive content management web application with React, incorporating modern technologies like Axios, Redux, and advanced React hooks to ensure scalability and user-friendly responsive design.',
+            'Implemented RESTful APIs fortified with JSON web tokens and bcrypt for user authentication mechanisms, ensuring endpoint security and scalability to meet evolving business requirements.',
+            'Designed and managed relational databases, employing Prisma ORM for table mapping and enhanced database operations.',
+            'Leveraged TypeScript to craft clean, maintainable, and type-safe asynchronous code, promoting seamless collaboration and codebase maintenance.',
+            'Configured AWS environments for the deployment of server, client-side web applications, and databases in cloud-based infrastructures, ensuring optimal performance and scalability.'
         ],
     },
 ];
@@ -75,7 +77,9 @@ const Experience: React.FC = () => {
     return (
         <div className="experience-container">
             <h1 className="heading">My Journey</h1>
-            <p className="paragraph"></p>
+            <p className="paragraph">
+
+            </p>
             <div className="experience-wrapper">
                 {experienceData.map((item, index) => (
                     <ExperienceSection key={index} {...item} />

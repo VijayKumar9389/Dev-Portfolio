@@ -59,7 +59,7 @@ const Work = () => {
             <div className="heading-wrapper">
                 <h1 className="heading">My Work</h1>
                 <p className="paragraph">
-                    All projects are uploaded to GitHub. Please feel free to reach out to me if you have any questions or would like to discuss a project.
+                    Working closely with clients, I specialize in creating customized technical solutions to meet business needs.
                 </p>
             </div>
             {project.sections.map((section, index) => (

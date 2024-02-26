@@ -84,7 +84,7 @@ const Skills = () => {
         <div className="skills-container">
             <h1 className="heading">What Can I do for you?</h1>
             <p className="paragraph">
-                I'm deeply passionate about software development, specializing in collaborating with clients to design and implement technical solutions
+                With my expertise in full-stack development and a two-year Diploma in Business Information Systems, I've shown a strong passion for software development and solving problems.
             </p>
             <div className="skills-wrapper">
                 {Data.map((skill, index) => (

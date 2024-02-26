@@ -12,7 +12,7 @@ const Project = () => {
     return (
         <div className="project-container">
             <h1 className="heading">View Projects</h1>
-            <p className="paragraph">Explore GitHub Repositories</p>
+            <p className="paragraph">Explore my code on GitHub</p>
 
             <div className="project-wrapper">
                 {projects.map((project, index) => (
