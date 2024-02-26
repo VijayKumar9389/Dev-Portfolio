@@ -1,0 +1,60 @@
+@import 'src/styles/theme.scss';
+
+.project-container {
+  padding: $spacingMedium;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.project-wrapper {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $spacingMedium; /* Add gap between grid items */
+
+  @media (max-width: $mobileBreakpoint) {
+    grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+}
+
+.project {
+  position: relative; /* Ensure relative positioning */
+  width: 100%; /* Make each project item occupy the full width of its grid cell */
+  height: 200px; /* Set a fixed height for each project item */
+  margin-bottom: $spacingSmall;
+  padding: $spacingMedium;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+
+  /* Dark overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+    border-radius: $borderRadius;
+    z-index: 1; /* Set a higher z-index to ensure it appears below the text */
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $boxShadowHover;
+  }
+
+  h2,
+  p {
+    position: relative; /* Ensure text appears above overlay */
+    z-index: 2; /* Set a higher z-index to ensure it appears above the overlay */
+  }
+}

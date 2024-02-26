@@ -24,6 +24,7 @@
   justify-content: flex-start;
   background-color: $cardBackgroundColor;
   box-shadow: $boxShadow;
+  text-align: center;
 }
 
 .skill-icon {
@@ -42,5 +43,4 @@
 .skill-description {
   font-size: 1rem;
   color: $textColorLight;
-  text-align: center;
 }

@@ -5,7 +5,6 @@
 .work-container {
   display: flex;
   flex-direction: column;
-  padding: $spacingMedium;
 
   .heading-wrapper {
     max-width:  1280px;
@@ -91,6 +90,19 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 0.5rem;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: #FFCAD4;
+      height: 3px;
+      left: 0;
+      bottom: -20px;
+      transition: width 0.3s ease;
+      animation: progress-animation 1s;
+      animation-delay: 0.8s;
+      animation-fill-mode: both;
+    }
   }
 
   .work-description {

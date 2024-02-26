@@ -11,6 +11,7 @@ import './styles/index.css';
 import {useEffect} from "react";
 import Contact from "./pages/Contact/Contact.tsx";
 import Footer from "./components/Footer/Footer.tsx";
+import Project from "./pages/Projects/Project.tsx";
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
                 <Skills/>
                 <Tech/>
                 <Work/>
+                <Project/>
                 <Experience/>
                 <Contact/>
                 <Footer/>

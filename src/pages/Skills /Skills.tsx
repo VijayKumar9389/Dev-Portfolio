@@ -1,67 +1,73 @@
 import './Skills.scss';
-import { FaLock, FaDatabase, FaCloud, FaJava, FaPython, FaServer } from 'react-icons/fa';
+import {FaLock, FaDatabase, FaCloud, FaJava, FaPython, FaServer, FaSass} from 'react-icons/fa';
 import {FaWeightScale} from "react-icons/fa6";
 import { AiOutlineRise } from 'react-icons/ai';
 import { SiTypescript, SiPrisma, SiGithub } from 'react-icons/si';
 
 const Data = [
     {
-        title: 'Secure Environment',
-        description: 'Secure design utilizing JWT, Bcrypt, and environment variables to protect against unauthorized access.',
+        title: 'Security First',
+        description: 'Built with security in mind, employing JWT, Bcrypt, and environment variables to safeguard against unauthorized access.',
         icon: <FaLock />,
     },
     {
-        title: 'Problem Solving',
-        description: 'Effectively designed digital solutions to enhance efficiency, minimizes errors, and maximizes productivity.',
+        title: 'Effective Solutions',
+        description: 'Crafted digital solutions that boost efficiency, minimize errors, and enhance productivity.',
         icon: <AiOutlineRise />,
     },
     {
-        title: 'Database Design',
-        description: 'Developed Relational database in Postgres using the Table per Hierarchy design',
+        title: 'Robust Database Design',
+        description: 'Designed relational databases using Postgres, implementing Table per Hierarchy for optimal data organization.',
         icon: <FaDatabase />,
     },
     {
-        title: 'Ready to Scale',
-        description: 'Clean architecture design to ensure maintainability and scalability of the system.',
+        title: 'Scalability Guaranteed',
+        description: 'Followed clean architecture principles to ensure the system is easily maintainable and scalable.',
         icon: <FaWeightScale />,
     },
     {
-        title: 'TypeScript',
-        description: 'Enforced Typesafe to enhance stability and ensure cleaner, more maintainable code',
+        title: 'Type Safety Ensured',
+        description: 'Enforced type safety with TypeScript, resulting in more stable and maintainable codebase.',
         icon: <SiTypescript />,
     },
     {
-        title: 'Cloud Deployment',
-        description: 'Configured cloud environment for deployment on AWS.',
+        title: 'Seamless Cloud Deployment',
+        description: 'Configured cloud environments for seamless deployment on AWS, ensuring reliability and scalability.',
         icon: <FaCloud />,
     },
     {
-        title: 'Version Control',
-        description: 'Utilized Git for version control and code pipeline management',
+        title: 'Efficient Version Control',
+        description: 'Utilized Git for robust version control and efficient code pipeline management.',
         icon: <SiGithub />,
     },
     {
-        title: 'Prisma ORM',
-        description: 'Establish a connection with the database for seamless table mapping',
+        title: 'Streamlined Database Connectivity',
+        description: 'Established seamless connections with databases using Prisma ORM, simplifying table mapping.',
         icon: <SiPrisma />,
     },
     {
-        title: 'Java',
-        description: 'Learned to program in Java following OOP principles and developed paid applications',
+        title: 'Proficient in Java',
+        description: 'Proficient in Java programming following object-oriented principles.',
         icon: <FaJava />,
     },
     {
-        title: 'Versatility',
-        description: 'Developed applications in Python and game designs with C#',
+        title: 'Versatile Skill Set',
+        description: 'Developed applications in Python and game designs using C#, showcasing versatility in programming languages.',
         icon: <FaPython />,
     },
     {
-        title: 'Restful API',
-        description: 'Developed Restful API using Node.js, Express, and MySQL',
+        title: 'RESTful API Development',
+        description: 'Engineered RESTful APIs with Node.js, Express, and MySQL, ensuring efficient data exchange and communication.',
         icon: <FaServer />,
+    },
+    {
+        title: 'Responsive Styling',
+        description: 'Implemented responsive designs using Sass and Tailwind CSS, ensuring optimal user experience across devices.',
+        icon: <FaSass />,
     },
     // Add more sections as needed
 ];
+
 
 const Skill = ({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) => {
     return (
