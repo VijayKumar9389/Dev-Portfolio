@@ -4,9 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
   background: linear-gradient(to bottom, $primaryColor, $backgroundColor);
-
   color: $textColor;
   font-family: 'Roboto', sans-serif;
   margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
@@ -18,6 +17,7 @@
     height: 100%;
   }
 }
+
 
 .hero-content {
   z-index: 1; /* Ensure content is above the image */

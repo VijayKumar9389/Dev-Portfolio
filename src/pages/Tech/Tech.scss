@@ -18,7 +18,7 @@
 }
 
 .services-card {
-  border-radius: $borderRadius;
+  border-radius: $borderRadiusLarge;
   padding: 1.5rem;
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -28,7 +28,6 @@
   color: $textColor;
 
   svg {
-    color: $primaryColor;
   }
 }
 

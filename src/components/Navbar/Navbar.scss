@@ -1,8 +1,10 @@
 @import 'src/styles/theme.scss';
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: $boxShadow;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-bottom: $border;
+  //box-shadow: $boxShadow;
   padding: $spacingSmall $spacingMedium; // Use medium spacing for padding
   display: flex;
   align-items: center;
@@ -44,7 +46,7 @@
       text-decoration: none;
       padding: $spacingSmall;
       transition: ease-in-out .3s;
-      border-radius: $borderRadius;
+      border-radius: $borderRadiusLarge;
       cursor: pointer;
 
       &:hover {
@@ -75,8 +77,8 @@
     position: fixed;
     right: 0;
     padding: $spacingMedium;
-    border-top-left-radius: $borderRadius;
-    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadiusLarge;
+    border-bottom-left-radius: $borderRadiusLarge;
     box-shadow: $boxShadowHover;
     max-width: 400px; // Adjust width as needed
     height: 100vh;
@@ -101,7 +103,7 @@
       text-decoration: none;
       padding: $spacingSmall;
       transition: ease-in-out .3s;
-      border-radius: $borderRadius;
+      border-radius: $borderRadiusLarge;
 
       &:hover {
         background-color: lighten($primaryColor, 30%);

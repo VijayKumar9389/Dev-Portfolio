@@ -1,0 +1,61 @@
+@import "src/styles/theme.scss";
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: $spacingLarge;
+  text-align: center;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $textColor;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: $textColorLight;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    color: $textColor;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .about-text {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

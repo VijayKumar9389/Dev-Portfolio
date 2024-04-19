@@ -10,8 +10,8 @@ import 'aos/dist/aos.css'; // Import AOS CSS fil
 import './styles/index.css';
 import {useEffect} from "react";
 import Contact from "./pages/Contact/Contact.tsx";
-import Footer from "./components/Footer/Footer.tsx";
 import Project from "./pages/Projects/Project.tsx";
+import About from "./pages/About/About.tsx";
 
 const App = () => {
 
@@ -26,13 +26,14 @@ const App = () => {
             <Navbar></Navbar>
             <div className="app-wrapper">
                 <Hero/>
-                <Skills/>
                 <Tech/>
+                <About />
+                <Skills/>
                 <Work/>
-                <Project/>
                 <Experience/>
+                <Project/>
                 <Contact/>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         </div>
     )

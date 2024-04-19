@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="logo">
-                <h2 onClick={() => window.scrollTo(0, 0)}>Vijay <strong>Kumar</strong></h2>
+                <h2 onClick={() => window.scrollTo(0, 0)}>Vijay Kumar</h2>
             </div>
             <div className="nav-menu">
                 <ScrollLink to="skills-container" className="nav-link" spy={true} smooth={true} offset={-70} duration={500}>Skills</ScrollLink>

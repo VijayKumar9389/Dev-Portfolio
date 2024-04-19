@@ -1,41 +1,23 @@
 @import 'src/styles/theme.scss';
 
 .contact {
-  background-color: $cardBackgroundColor;
-
-  .custom-shape-divider-bottom-1698512698 {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .custom-shape-divider-bottom-1698512698 svg {
-    position: relative;
-    display: block;
-    width: calc(300% + 1.3px);
-    height: 191px;
-    background-color: $backgroundColor;
-
-  }
-
-  .custom-shape-divider-bottom-1698512698 .shape-fill {
-    fill: $cardBackgroundColor;
-  }
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: $spacingMedium;
 }
 
 .contact-wrapper {
   display: grid;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   justify-content: center;
   padding: $spacingMedium;
+  background: linear-gradient(to bottom right, $primaryColor, $secondaryColor);
+  border-radius: $borderRadiusLarge;
+  box-shadow: $boxShadow;
+  margin-bottom: $spacingMedium;
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
@@ -53,6 +35,7 @@
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
+      color: #fff;
     }
 
     p {
@@ -73,6 +56,7 @@
       font-size: 24px;
       margin-bottom: 20px;
       width: 100%;
+      color: #fff;
     }
 
     .contact-item {

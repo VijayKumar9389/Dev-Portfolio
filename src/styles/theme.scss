@@ -1,16 +1,21 @@
-$primaryColor: #4CAF50;         // Main color for primary elements
-$secondaryColor: gray;       // Secondary color for accent elements
-$backgroundColor: #f5f5f5;     // Updated background color for the entire page
-$cardBackgroundColor: #f0f0f0;  // Background color for cards and panels
-$textColor: #333;               // Updated default text color
-$textColorLight: #666;          // Lighter text color for secondary text
-$border: 1px solid #ccc;        // Updated default border
-$boxShadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Default box shadow
-$boxShadowHover: 0 4px 8px rgba(0, 0, 0, 0.2); // Box shadow on hover
-$borderRadius: 8px;             // Border radius for rounded elements
+// Deep Dark Material Theme Colors
+$primaryColor: #0056b3;
+$secondaryColor: #388e3c;  /* Dark teal */
+$backgroundColor: #0F0F0F;       // Updated background color for the entire page (deep black)
+$cardBackgroundColor: #1D1D1D;    // Background color for cards and panels (dark gray)
+$textColor: #FFFFFF;              // Updated default text color (white)
+$textColorLight: #A6A6A6;         // Lighter text color for secondary text (light gray)
+$border: 1px solid #333;       // Updated default border (dark blue-gray)
+$boxShadow: 0 2px 4px rgba(0, 0, 0, 0.4); // Default box shadow (dark)
+$boxShadowHover: 0 4px 8px rgba(0, 0, 0, 0.6); // Box shadow on hover (darker)
+$borderRadiusLarge: 12px;              // Border radius for rounded elements (slightly larger)
+$borderRadiusSmall: 6px;                    // Border radius for buttons (slightly larger)
 
 $spacingSmall: 8px; // Base spacing unit
 $spacingMedium: 16px; // Medium spacing unit
 $spacingLarge: 24px; // Large spacing unit
 
 $mobileBreakpoint: 768px; // Breakpoint for mobile devices
+$tabletBreakpoint: 1024px; // Breakpoint for tablet devices
+$desktopBreakpoint: 1280px; // Breakpoint for desktop devices
+$maxWidth: 1440px; // Maximum width for the content

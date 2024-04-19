@@ -2,8 +2,44 @@
 
 .skills-container {
   padding: $spacingMedium;
-  max-width: 1280px;
+  max-width: $maxWidth;
   margin: 0 auto;
+
+  .category-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacingLarge;
+  }
+
+  .category-button {
+    background: linear-gradient(to right, #2196F3, #1976D2); /* Material blue gradient */
+    color: #fff; /* White text color */
+    border: none;
+    padding: $spacingSmall $spacingMedium;
+    margin-right: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+    display: flex;
+    align-items: center;
+    box-shadow: $boxShadow;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, #1976D2, #1565C0); /* Darker shade of blue on hover */
+      color: #fff; /* White text color */
+    }
+
+    &.active {
+      background: linear-gradient(to right, #1976D2, #1565C0); /* Darker shade of blue for active state */
+      color: #fff; /* White text color */
+    }
+  }
+
 }
 
 .skills-wrapper{
@@ -14,8 +50,7 @@
 }
 
 .skill-card {
-  border-radius: $borderRadius;
-  border: $border;
+  border-radius: $borderRadiusLarge;
   padding: $spacingMedium;
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -25,22 +60,19 @@
   background-color: $cardBackgroundColor;
   box-shadow: $boxShadow;
   text-align: center;
+  border: $border;
 }
 
 .skill-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
   color: $primaryColor;
 }
 
 .skill-title {
-  font-size: 1.25rem;
-  font-weight: bold;
   color: $textColor;
   margin-bottom: 0.5rem;
 }
 
 .skill-description {
-  font-size: 1rem;
   color: $textColorLight;
 }

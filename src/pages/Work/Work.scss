@@ -1,16 +1,12 @@
-@import 'src/styles/theme.scss';
-
-
+@import "src/styles/theme.scss";
 
 .work-container {
   display: flex;
   flex-direction: column;
 
   .heading-wrapper {
-    max-width:  1280px;
-    margin: 0 auto;
+    max-width: 1280px;
     width: 100%;
-    padding: 0 $spacingMedium;
 
     h1 {
       width: 100%;
@@ -21,23 +17,24 @@
 .work-section {
   display: flex;
   align-items: center;
+  background: linear-gradient(to bottom, $backgroundColor, $cardBackgroundColor);
+  padding: $spacingLarge;
+  border-bottom: $border;
   min-height: 600px;
-  background-color: $cardBackgroundColor;
-
 
   &:nth-child(odd) {
-    background: $backgroundColor;
+    background-color: $cardBackgroundColor;
 
     .work-wrapper {
-      grid-template-areas: 'content image'; // Added quotation marks
-      text-align: right;
-      grid-template-columns: 40% 60%;
+      grid-template-areas: 'content image';
+      text-align: left;
+      grid-template-columns: 4fr 6fr;
+      margin: auto;
 
-      @media (max-width: 768px) {
+      @media (max-width: $tabletBreakpoint) {
         flex-direction: column;
         grid-template-areas: none;
         min-height: auto;
-
       }
     }
   }
@@ -46,16 +43,14 @@
 .work-wrapper {
   transition: transform 0.3s ease-in-out;
   display: grid;
-  max-width: 1280px;
+  max-width: $maxWidth;
   margin: 0 auto;
-  gap: 1rem;
   grid-template-columns: 60% 40%;
-  grid-template-areas: 'image content'; // Added quotation marks
-  align-items: center;
-  text-align: left;
-  padding: $spacingMedium;
+  grid-template-areas: 'image content';
+  align-items: flex-start;
+  text-align: right;
 
-  @media (max-width: 768px) {
+  @media (max-width: $tabletBreakpoint) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,19 +58,24 @@
     gap: 0px;
     min-height: auto;
   }
-
-
 }
 
 .work-image {
   width: 100%;
+  height: auto; /* Ensures image maintains aspect ratio */
+  object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 1rem;
-  grid-area: image;
+  animation: fade-in-left 1s ease-in-out both;
+  grid-area: image; /* Assign grid area for the image */
   box-shadow: $boxShadowHover;
   z-index: 5;
-  position: relative;
+
+  @media (max-width: $tabletBreakpoint) {
+    margin-bottom: $spacingLarge;
+  }
+
 }
+
 
 .work-content {
   display: flex;
@@ -83,30 +83,55 @@
   grid-area: content;
   z-index: 1;
   position: relative;
+  width: auto;
+  padding-right: $spacingLarge;
+  width: 100%;
+
+  &:nth-child(even) {
+    padding-left: $spacingLarge;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: #FFCAD4;
+    height: 100%;
+    left: 0;
+    bottom: -20px;
+    transition: width 0.3s ease;
+    animation: progress-animation 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+  }
+
+  @media (max-width: $tabletBreakpoint) {
+    padding: 0 !important;
+  }
 
   .work-title {
     width: 100%;
-    font-size: 1.25rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-
-    &:after {
-      content: '';
-      position: absolute;
-      background-color: #FFCAD4;
-      height: 3px;
-      left: 0;
-      bottom: -20px;
-      transition: width 0.3s ease;
-      animation: progress-animation 1s;
-      animation-delay: 0.8s;
-      animation-fill-mode: both;
-    }
+    color: #fff;
   }
 
   .work-description {
-    font-size: 1rem;
     color: #666;
+    margin-bottom: 10px;
+    padding: $spacingSmall;
+    transition: ease-in-out .3s;
+    border-radius: $borderRadiusSmall;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: rgba(0, 123, 255, 0.3);
+      border: 1px solid $primaryColor;
+    }
+
+    &.selected {
+      background-color: rgba(0, 123, 255, 0.3);
+      border: 1px solid $primaryColor;
+      color: #fff;
+    }
   }
 }
+
