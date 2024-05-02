@@ -34,7 +34,7 @@ const Navbar = () => {
                             <ScrollLink to="skills-container" className="modal-link" onClick={toggleModal} spy={true} smooth={true} offset={-70} duration={500}>Skills</ScrollLink>
                             <ScrollLink to="work-container" className="modal-link" onClick={toggleModal} spy={true} smooth={true} offset={-70} duration={500}>Work</ScrollLink>
                             <ScrollLink to="experience-container" className="modal-link" onClick={toggleModal} spy={true} smooth={true} offset={-70} duration={500}>Experience</ScrollLink>
-                            <ScrollLink to="contact" onClick={toggleModal} spy={true} smooth={true} offset={-70} duration={500}><button className="btn-contact" onClick={toggleModal}>Contact</button></ScrollLink>
+                            <ScrollLink to="contact" onClick={toggleModal} spy={true} smooth={true} offset={-70} duration={500}><button className="btn-contact">Contact</button></ScrollLink>
                         </div>
                     </div>
                 </div>
