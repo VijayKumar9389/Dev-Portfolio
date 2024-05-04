@@ -3,9 +3,7 @@
 .contact {
   position: relative;
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: $spacingMedium;
+  background: linear-gradient(to bottom, $backgroundColor, $primaryColor );
 }
 
 .contact-wrapper {
@@ -14,10 +12,7 @@
   gap: 1rem;
   justify-content: center;
   padding: $spacingMedium;
-  background: linear-gradient(to bottom right, $primaryColor, $secondaryColor);
-  border-radius: $borderRadiusLarge;
   box-shadow: $boxShadow;
-  margin-bottom: $spacingMedium;
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);

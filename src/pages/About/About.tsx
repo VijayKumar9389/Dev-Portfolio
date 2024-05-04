@@ -1,15 +1,11 @@
 import './About.scss';
+import React from "react";
 
-const About = () => {
+const About: React.FC<{title: string, desc: string}> = ({title, desc}) => {
     return (
         <section className="about-section">
-            <h2 data-aos="fade-up">About Me</h2>
-            <p className="paragraph" data-aos="fade-up" data-aos-delay="300">
-                Experienced full-stack web developer with a two-year Diploma in Business Information Systems and demonstrated history of building
-                enterprise-level applications. Skilled in front-end and back-end development using modern technologies such as React, Node.js,
-                and Express.js. Proficient in designing and implementing RESTful APIs for seamless data interaction and building responsive user
-                interfaces for enhanced user experience.
-            </p>
+            <h2 data-aos="fade-up">{title}</h2>
+            <p className="paragraph" data-aos="fade-up" data-aos-delay="300">{desc}</p>
         </section>
     );
 };

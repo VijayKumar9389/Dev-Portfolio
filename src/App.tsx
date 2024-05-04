@@ -27,8 +27,18 @@ const App = () => {
             <div className="app-wrapper">
                 <Hero/>
                 <Tech/>
-                <About />
+                <About
+                    title="About Me"
+                    desc="Experienced full-stack web developer with a two-year Diploma in Business Information Systems and demonstrated history of building
+                enterprise-level applications. Skilled in front-end and back-end development using modern technologies such as React, Node.js,
+                and Express.js. Proficient in designing and implementing RESTful APIs for seamless data interaction and building responsive user
+                interfaces for enhanced user experience."/>
                 <Skills/>
+                <About
+                    title="OnTract Project"
+                    desc="Developed an enterprise web application for an emergency management company, allowing efficient management of delivery, inventory, and stakeholder information by project.
+                The application included features such as automated data organization from Excel files, robust security measures with an access token system, responsive design for field agents, and functionalities for managing deliveries, inventory, user creation, and project file uploads.
+                The project significantly improved operational efficiency and reduced errors, marking it a success for the company."/>
                 <Work/>
                 <Experience/>
                 <Project/>
