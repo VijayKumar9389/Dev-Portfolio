@@ -1,24 +1,19 @@
 // Import theme variables
 @import 'src/styles/theme.scss';
 
-// Project component styles
-.project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .project-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: $spacingMedium;
   max-width: $maxWidth; // Adjust max-width as needed
+  padding: $spacingMedium
 }
 
 .project-card {
   position: relative; // Make the card position relative to enable absolute positioning of description
   width: 100%;
-  margin: 10px; // Adjust margin as needed
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Card shadow
   transition: transform 0.3s ease;

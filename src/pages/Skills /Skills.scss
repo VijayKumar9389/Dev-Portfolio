@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     margin-bottom: $spacingLarge;
+    overflow-x: auto;
   }
 
   .category-button {
@@ -30,13 +31,13 @@
     }
 
     &:hover {
-      background: linear-gradient(to right, #1976D2, #1565C0); /* Darker shade of blue on hover */
-      color: #fff; /* White text color */
+      color: $primaryColor; /* Darker shade of blue for active state */
+      background: #fff; /* White text color */
     }
 
     &.active {
-      background: linear-gradient(to right, #1976D2, #1565C0); /* Darker shade of blue for active state */
-      color: #fff; /* White text color */
+      color: $primaryColor; /* Darker shade of blue for active state */
+      background: #fff; /* White text color */
     }
   }
 

@@ -3,7 +3,6 @@ import {projectsData} from "./Data.ts";
 
 const Project = () => {
     return (
-        <div className="project-container">
             <div className="project-wrapper">
                 {projectsData.map((project, index: number) => (
                     <div className="project-card" key={index}>
@@ -15,7 +14,6 @@ const Project = () => {
                     </div>
                 ))}
             </div>
-        </div>
     );
 };
 
