@@ -111,7 +111,7 @@ const Data = [
         category: 'backend',
     },
     {
-        title: 'Type Safety Maintained',
+        title: 'TypeScript',
         description: 'Enforced type safety with TypeScript, resulting in a more stable and maintainable codebase.',
         icon: <SiTypescript/>,
         category: 'frontend',
@@ -135,16 +135,16 @@ const Data = [
         category: 'backend',
     },
     {
-        title: 'Proficient in Java',
-        description: 'Proficient in Java programming following object-oriented principles.',
+        title: 'Java Development',
+        description: 'Learned programming in Java following object-oriented principles and developed paid applications.',
         icon: <FaJava/>,
         category: 'other',
     },
     {
-        title: 'Versatile Skill Set',
-        description: 'Developed applications in Python and game designs using C#, showcasing versatility in programming languages.',
+        title: 'Python Development',
+        description: 'Developed paid Python applications for automating data analysis and organization tailored to specific business needs.',
         icon: <FaPython/>,
-        category: 'backend',
+        category: 'other',
     },
     {
         title: 'RESTful API Development',
