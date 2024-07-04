@@ -3,10 +3,7 @@
 @import 'src/styles/theme.scss';
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  border-bottom: $border;
-  padding: $spacingSmall $spacingMedium;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,11 +11,19 @@
   position: fixed;
   top: 0;
   z-index: 900;
+  transition: ease-in-out .3s;
+  padding: $spacingMedium;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
 
   .logo {
     font-size: 1.5rem;
     font-weight: 500;
-    color: $primaryColor;
+    color: #fff;
     margin-right: $spacingMedium;
     cursor: pointer;
 
@@ -39,19 +44,31 @@
     }
 
     .nav-link {
-      color: $textColor;
-      font-weight: 500;
       position: relative;
-      margin: 0 $spacingMedium;
+      padding: $spacingSmall; // Your padding
+        margin: 0 $spacingSmall; // Your margin
+      font-size: 1.2em;
+      color: $textColor; // Your text color
       text-decoration: none;
-      padding: $spacingSmall;
-      transition: ease-in-out .3s;
-      border-radius: $borderRadiusLarge;
+      transition: color 0.3s;
       cursor: pointer;
 
-      &:hover {
-        background-color: lighten($primaryColor, 30%);
-        box-shadow: $boxShadow;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background-color: $textColor; // Your primary color
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }
@@ -145,11 +162,11 @@
     align-items: center;
     justify-content: space-between;
     background: none;
-    border: 2px solid $primaryColor;
+    border: 2px solid $textColor;
     background: transparent;
     border-radius: 5px;
     padding: $spacingSmall $spacingMedium;
-    color: $primaryColor;
+    color: $textColor;
     font-size: 18px;
     cursor: pointer;
     position: relative;
@@ -162,7 +179,7 @@
     &::before {
       content: '';
       position: absolute;
-      background: $primaryColor;
+      background: $textColor;
       width: 100%;
       height: 0%;
       left: 0;
@@ -172,7 +189,7 @@
     }
 
     &:hover {
-      color: #fff;
+      color: $primaryColor;
     }
 
     &:hover::before {

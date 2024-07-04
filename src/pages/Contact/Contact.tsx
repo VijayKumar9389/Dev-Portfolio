@@ -2,7 +2,7 @@ import './Contact.scss';
 import {FaGithub} from 'react-icons/fa';
 import {IoLocationOutline, IoMail, IoPhonePortrait, IoDocumentTextOutline} from 'react-icons/io5';
 import resumePDF from '../../assets/resume.pdf';
-import Image from '../../assets/images/meet.svg';
+import Image from '../../assets/images/Meet.svg';
 import {FiSend} from "react-icons/fi";
 
 const Contact = () => {
@@ -13,11 +13,10 @@ const Contact = () => {
         <div className="contact">
             <div className="contact-wrapper">
                 <div className="contact-header">
-                    <h1>Lets Get In Contact!</h1>
+                    <h1>Lets Get In Touch!</h1>
                     <img
                         src={Image}
                         alt="Footer Image"
-                        className="hero-image"
                     />
                 </div>
                 <div className="contact-column">

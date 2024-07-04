@@ -1,76 +1,76 @@
-// Import theme variables
 @import 'src/styles/theme.scss';
 
-
+.project-container {
+  width: 100%;
+  max-width: $maxWidth; // Adjust max-width as needed
+  padding: $spacingMedium;
+  margin: 0 auto;
+}
 
 .project-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: $spacingMedium;
-  max-width: $maxWidth; // Adjust max-width as needed
-  padding: $spacingMedium
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Adjusted min width to fit more items on smaller screens
+  gap: $spacingMedium; // Reduced spacing for better fit
+  padding: $spacingMedium;
+  justify-items: center;
+
 }
 
 .project-card {
-  position: relative; // Make the card position relative to enable absolute positioning of description
   width: 100%;
+  max-width: 350px; // Reduced max width for better fit
   overflow: hidden;
-  transition: transform 0.3s ease;
-  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 
   &:hover {
-    transform: translateY(-5px); // Card hover effect
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
-    .project {
-      &:after {
-        opacity: 1; // Show the overlay on hover
+    .project-title {
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .project {
+    width: 100%;
+    height: 180px; // Reduced height for better fit
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: $borderRadiusLarge; // Adjusted border radius
+
+
+    .project-description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: $spacingSmall;
+      background: rgba(0, 0, 0, 0.6);
+      color: $textColorLight;
+      font-size: 1em; // Adjusted font size
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      @media (max-width: $mobileBreakpoint) {
+        font-size: 0.9em; // Further adjusted font size for smaller screens
       }
     }
 
-    .project-description {
-      opacity: 1; // Show the description on hover
-      color: #fff; // Adjust text color as needed
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Add a subtle text shadow
+    &:hover .project-description {
+      opacity: 1;
     }
   }
-}
 
-.project {
-  position: relative; // Make the project position relative to enable absolute positioning of overlay
-  height: 200px; // Adjust height as needed
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  border-radius: $borderRadiusLarge; // Apply border radius to cards
-
-  &:after {
-    content: ''; // Add a pseudo-element to create the overlay
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); // Adjust the alpha value to darken the background
-    border-radius: $borderRadiusLarge; // Apply border radius to description
-    opacity: 0; // Initially hide the overlay
-    transition: opacity 0.3s ease; // Add transition for smooth appearance
+  .project-title {
+    padding: $spacingSmall; // Reduced padding for better fit
+    font-size: 1.3rem; // Adjusted font size
+    text-align: center;
+    background: $backgroundColor;
+    color: $textColor;
   }
-}
-
-.project-description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1; // Ensure the description is above the overlay
-}
-
-h3 {
-  margin: 10px;
-  color: $textColor; // Use primary color for headers from theme
 }

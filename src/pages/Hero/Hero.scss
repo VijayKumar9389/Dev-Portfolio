@@ -7,38 +7,41 @@
   height: 100vh;
   background: linear-gradient(to bottom, $primaryColor, $backgroundColor);
   color: $textColor;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
+  margin-bottom: $spacingMedium;
   overflow: hidden;
-  padding: $spacingMedium; // Use medium spacing for padding
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    height: 100%;
-  }
 }
-
 
 .hero-content {
-  z-index: 1; /* Ensure content is above the image */
+  z-index: 1;
   position: relative;
-  padding-top: 5rem;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
-  color: #fff;
-}
-
-.p-hero {
-  font-size: 1.5rem;
-  margin-bottom: $spacingMedium; // Use medium spacing for bottom margin
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image {
-  width: 300px;
-  height: 300px;
-  margin-left: $spacingLarge; // Use large spacing for left margin
+  width: 60vw;
+  height: auto;
+  z-index: 2;
+
+  @media (max-width: $mobileBreakpoint) {
+    width: 100vw;
+  }
+}
+
+.hero-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.p-hero {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;  // Ensure text is centered like the title
 }

@@ -1,15 +1,11 @@
-import StakeholderStats from "../../assets/images/StakeholderStats.png";
-import StakeholderInteract from "../../assets/images/StakeholderInteraction.png";
-import MobileCompatible from "../../assets/images/MobileCompatible.png";
-import DesignPackage from "../../assets/images/DesignPackage.png";
-import ManageInventory from "../../assets/images/ManageInventory.png";
-import StakeholderVisual from "../../assets/images/StakeholderVisual.png";
-import StakeholderReport from "../../assets/images/StakeholderReport.png";
-import ProjectManagement from "../../assets/images/ProjectManagement.png";
-import LoginScreen from "../../assets/images/LoginScreen.png";
-import UploadFile from "../../assets/images/UploadFile.png";
-import UserAuth from "../../assets/images/UserAuth.png";
-import ImageStorage from "../../assets/images/ImageStorage.png";
+import StakeholderInfo from "../../assets/screenshoots/Stakeholders.png";
+import Deliveries from "../../assets/screenshoots/Deliveries.png";
+import Users from "../../assets/screenshoots/Users.png";
+import Inventory from "../../assets/screenshoots/Inventory.png";
+import Losses from "../../assets/screenshoots/Losses.png";
+import Upload from "../../assets/screenshoots/Upload.png";
+import Mobile from "../../assets/screenshoots/Mobile.png";
+import Validation from "../../assets/screenshoots/Validation.png";
 
 export interface WorkSectionData {
     description: string;
@@ -18,72 +14,56 @@ export interface WorkSectionData {
 
 export interface WorkData {
     title: string;
+    desc?: string;
     sections: WorkSectionData[];
 }
 
 export const workData: WorkData[] = [
     {
-        title: 'Data Analysis Automation:',
+        title: 'Outreach Management',
+        desc: 'Facilitates stakeholder information, delivery tracking, and inventory management to streamlined outreach program for Triton Public Awareness.',
         sections: [
             {
-                description: 'Efficient automation to handle complex data analysis tasks seamlessly.',
-                imageUrl: StakeholderStats,
+                description: 'Organize and visualize stakeholder information for accurate and up-to-date interactions.',
+                imageUrl: StakeholderInfo,
             },
             {
-                description: 'Streamline stakeholder communication for a smoother user experience and fewer errors.',
-                imageUrl: StakeholderInteract,
+                description: 'Track delivery and inventory efficiently to ensure safety package distribution.',
+                imageUrl: Deliveries,
             },
             {
-                description: 'Well-organized design to visualize large amounts of information effectively.',
-                imageUrl: StakeholderVisual,// need a picture of the filtering system
+                description: 'Upload Excel projects and generate instant insights, eliminating manual data analysis.',
+                imageUrl: Upload,
             },
             {
-                description: 'Generate automatic reports, reducing repetitive data analysis tasks.',
-                imageUrl: StakeholderReport,
+                description: 'Access from mobile devices for seamless caller and delivery team coordination.',
+                imageUrl: Mobile,
             },
         ],
     },
     {
-        title: 'Streamlined Delivery Management:',
+        title: 'Inventory Management',
+        desc: 'Track and manage inventory for a property rental company, ensuring accurate record-keeping and receipt storage.',
         sections: [
             {
-                description: 'Design, assign, and track packages seamlessly for streamlined delivery management.',
-                imageUrl: DesignPackage,
+                description: 'Maintain accurate records by adding, updating, and removing inventory items and receipts.',
+                imageUrl: Inventory,
             },
             {
-                description: 'Manage inventory with ease, including tracking and monitoring stock effectively.',
-                imageUrl: ManageInventory,
+                description: 'Track losses by assigning values and marking items as missing to generate insights across locations.',
+                imageUrl: Losses,
             },
             {
-                description: 'Empower field agents with a user-friendly mobile interface for on-the-go efficiency.',
-                imageUrl: MobileCompatible,
+                description: 'Prevent discrepancies and errors in operations with validation and error handling.',
+                imageUrl: Validation,
             },
             {
-                description: 'Precise stakeholder, delivery, item management within each project.',
-                imageUrl: ProjectManagement,
+                description: 'Enhance security by managing users and protecting features with admin account access.',
+                imageUrl: Users,
             },
         ],
-    },
-    {
-        title: 'Data Security and Management:',
-        sections: [
-            {
-                description: 'Upload Excel files effortlessly, with automatic data normalization for clean database storage.',
-                imageUrl: UploadFile,
-            },
-            {
-                description: 'Protect client data with secure access through a user-friendly login interface.',
-                imageUrl: LoginScreen,
-            },
-            {
-                description: 'Safeguard sensitive features with robust user authentication.',
-                imageUrl: UserAuth,
-            },
-            {
-                description: 'Upload images to store for easy access and retrieval.',
-                imageUrl: ImageStorage,
-            },
-        ],
-    },
+    }
+
     // Add more projects as needed
 ];
+

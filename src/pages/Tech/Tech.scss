@@ -3,7 +3,6 @@
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .marquee-wrapper {
@@ -28,6 +27,11 @@
   color: $textColor;
 
   svg {
+    color: $primaryColor;
+  }
+
+  h2 {
+    font-weight: normal;
   }
 }
 
@@ -35,9 +39,6 @@
   font-size: 3rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-}
 
 @keyframes marquee {
   from {

@@ -1,8 +1,40 @@
 @import "src/styles/theme.scss";
 
+.work-header {
+  padding: 1rem;
+
+  .work-heading-image {
+    width: 100%;
+    max-width: 60vw;
+    height: auto;
+  }
+
+  h1 {
+    color: $textColor;
+    font-size: 2.5em;
+    margin-bottom: $spacingMedium;
+    font-weight: normal;
+  }
+
+  p {
+    color: $textColorLight;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 800px;
+  }
+}
+
+
 .work-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: $maxWidth; // Adjust max-width as needed
+  padding: $spacingMedium;
+  margin: 0 auto;
+  gap: $spacingLarge;
 
   .heading-wrapper {
     max-width: 1280px;
@@ -17,19 +49,16 @@
 .work-section {
   display: flex;
   align-items: center;
-  background: linear-gradient(to bottom, $backgroundColor, $cardBackgroundColor);
-  padding: $spacingLarge;
-  border-bottom: $border;
-  min-height: 600px;
+  margin-bottom: $spacingLarge;
 
   &:nth-child(odd) {
-    background-color: $cardBackgroundColor;
 
     .work-wrapper {
       grid-template-areas: 'content image';
       text-align: left;
       grid-template-columns: 4fr 6fr;
       margin: auto;
+
 
       @media (max-width: $tabletBreakpoint) {
         flex-direction: column;
@@ -70,10 +99,6 @@
   box-shadow: $boxShadowHover;
   z-index: 5;
 
-  @media (max-width: $tabletBreakpoint) {
-    margin-bottom: $spacingLarge;
-  }
-
 }
 
 
@@ -83,7 +108,6 @@
   grid-area: content;
   z-index: 1;
   position: relative;
-  width: auto;
   padding-right: $spacingLarge;
   width: 100%;
 
@@ -110,28 +134,37 @@
 
   .work-title {
     width: 100%;
-    font-weight: bold;
+    font-weight: normal;
     color: #fff;
   }
 
+  .work-info {
+    margin-bottom: $spacingMedium;
+    color: $textColorLight;
+    font-style: italic;
+  }
+
   .work-description {
-    color: #666;
     margin-bottom: 10px;
     padding: $spacingSmall;
-    transition: ease-in-out .3s;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     border-radius: $borderRadiusSmall;
-    border: 1px solid transparent;
+    color: $textColor;
+    background-color: $cardBackgroundColor;
 
     &:hover {
-      background-color: rgba(0, 123, 255, 0.3);
-      border: 1px solid $primaryColor;
+      border-color: $primaryColor;
+      box-shadow: $boxShadow;
     }
 
     &.selected {
-      background-color: rgba(0, 123, 255, 0.3);
-      border: 1px solid $primaryColor;
-      color: #fff;
+      background-color: $primaryColor;
+      color: $textColor;
+      box-shadow: 0 4px 6px $boxShadowHover;
+      transform: translateY(-2px);
     }
   }
+
+
 }
 

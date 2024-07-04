@@ -1,8 +1,11 @@
 import './Project.scss';
 import {projectsData} from "./Data.ts";
+import Header from "../../components/Header/Header.tsx";
 
 const Project = () => {
     return (
+            <div className="project-container">
+                <Header heading="Resources & Contact" desc=""/>
             <div className="project-wrapper">
                 {projectsData.map((project, index: number) => (
                     <div className="project-card" key={index}>
@@ -10,9 +13,10 @@ const Project = () => {
                              onClick={() => window.open(project.link, "_blank")}>
                             <p className="project-description">{project.description}</p>
                         </div>
-                        <h3>{project.title}</h3>
+                        <h3 className="project-title">{project.title}</h3>
                     </div>
                 ))}
+            </div>
             </div>
     );
 };

@@ -2,6 +2,7 @@
 
 .skills-container {
   padding: $spacingMedium;
+  width: 100%;
   max-width: $maxWidth;
   margin: 0 auto;
 
@@ -13,7 +14,7 @@
   }
 
   .category-button {
-    background: linear-gradient(to right, #2196F3, #1976D2); /* Material blue gradient */
+    background: linear-gradient(to right, #8a2be2, darken(#8a2be2, 10%)); /* Material blue gradient */
     color: #fff; /* White text color */
     border: none;
     padding: $spacingSmall $spacingMedium;
@@ -70,8 +71,9 @@
 }
 
 .skill-title {
-  color: $textColor;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin: $spacingSmall 0;
+  color: #fff;
 }
 
 .skill-description {

@@ -1,8 +1,10 @@
 import './Work.scss';
 import React, {useEffect, useState} from "react";
 import {WorkData, WorkSectionData, workData} from "./Data.ts";
+import ImageStorage from "../../assets/images/Devices.png";
+import Header from "../../components/Header/Header.tsx";
 
-const ProjectSection: React.FC<{ project: WorkData }> = ({ project }) => {
+const ProjectSection: React.FC<{ project: WorkData }> = ({project}) => {
     const [selectedSection, setSelectedSection] = useState<number>(0);
 
     const handleMouseEnter = (index: number): void => {
@@ -24,6 +26,7 @@ const ProjectSection: React.FC<{ project: WorkData }> = ({ project }) => {
                 />
                 <div className="work-content" data-aos="fade-left">
                     <h2 className="work-title">{project.title}</h2>
+                    <p className="work-info">{project.desc}</p>
                     {project.sections.map((section: WorkSectionData, sectionIndex: number) => {
                         return (
                             <div
@@ -45,10 +48,15 @@ const ProjectSection: React.FC<{ project: WorkData }> = ({ project }) => {
 const Work = () => {
     return (
         <div className="work-container">
-            <div className="heading-wrapper">
-            </div>
+            <>
+                <Header
+                    heading="Explore My Digital Solutions Powering Real-World Businesses"
+                    desc=""
+                />
+                <img src={ImageStorage} alt="Hero Image" data-aos="fade-in" className="work-heading-image"/>
+            </>
             {workData.map((project: WorkData, index: number) => (
-                <ProjectSection key={index} project={project} />
+                <ProjectSection key={index} project={project}/>
             ))}
         </div>
     );

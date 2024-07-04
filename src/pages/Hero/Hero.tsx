@@ -1,18 +1,16 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import './Hero.scss';
-import image from '../../assets/images/App.svg';
+import image from '../../assets/images/Laptops.png';
 import AOS from "aos";
 
 const Hero = () => {
     const [scrollY, setScrollY] = useState(0);
 
-    useEffect((): void => {
+    useEffect(() => {
         AOS.init({
             duration: 1000,
         });
-    }, []);
 
-    useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
@@ -25,26 +23,28 @@ const Hero = () => {
     }, []);
 
     const parallaxStyle = {
-        transform: `translateY(${scrollY * 0.5}px)`, // Adjust the multiplier for the parallax effect
+        transform: `translateX(${scrollY * 0.5}px)`,
+        opacity: 1 - scrollY / 1000,
     };
 
+    const reverseParallaxStyle = {
+        transform: `translateX(-${scrollY * 0.5}px)`,
+        opacity: 1 - scrollY / 1000,
+    };
     return (
         <section className="hero-container">
-            {/*<ParticleBackground />*/}
             <div className="hero-content">
-                <h2 data-aos="fade-down">
-                    Welcome!
+                <img
+                    style={reverseParallaxStyle}
+                    src={image}
+                    alt="Hero Image"
+                    className="hero-image"
+                />
+                <h2 className="hero-title" style={parallaxStyle}>
+                    Got a Vision?
+                    With Our Expertise, We'll Build <strong>Your Perfect Business Tool</strong>.
                 </h2>
-                <p className="p-hero" data-aos="fade-right">
-                    To my developers portfolio.
-                </p>
             </div>
-            <img
-                style={parallaxStyle}
-                src={image}
-                alt="Hero Image"
-                className="hero-image"
-            />
         </section>
     );
 };

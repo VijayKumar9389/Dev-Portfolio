@@ -1,24 +1,28 @@
 import React, {useState} from 'react';
 import './Skills.scss';
 import {
-    FaLock,
+    FaUsers,
     FaDatabase,
     FaCloud,
     FaJava,
     FaPython,
     FaServer,
+    FaChartBar,
     FaSass,
-    FaBrain,
-    FaReact, FaAngular, FaMobileAlt
+    FaReact,
+    FaAngular,
+    FaMobileAlt,
+    FaShieldAlt,
+    FaCodeBranch,
+    FaHtml5, FaCog
 } from 'react-icons/fa';
-import {FaHtml5, FaWeightScale} from "react-icons/fa6";
-import {AiOutlineRise} from 'react-icons/ai';
-import {SiTypescript, SiPrisma, SiGithub} from 'react-icons/si';
-import {GrGraphQl} from "react-icons/gr";
+import { AiOutlineRise, AiOutlineCode } from 'react-icons/ai';
+import { SiTypescript, SiGithub, SiPrisma, SiGraphql } from 'react-icons/si';
+import Header from "../../components/Header/Header.tsx";
 
 const Skill = ({title, description, icon}: { title: string; description: string; icon: React.ReactNode }) => {
     return (
-        <div className="skill-card" data-aos="fade-up" data-aos-duration="1000">
+        <div className="skill-card" data-aos="fade-in">
             <div className="skill-icon">{icon}</div>
             <h3 className="skill-title">{title}</h3>
             <p className="skill-description">{description}</p>
@@ -39,9 +43,15 @@ const Skills = () => {
 
     const filteredData = selectedCategory ? Data.filter(skill => skill.category === selectedCategory) : Data;
 
+    const headingData = {
+        heading: "I Handle All Aspects of Full Stack Development to Launch Your Digital Solutions",
+        desc: "Ensuring that everything from initial design and development to deployment, management, and scaling is expertly handled.",
+    };
+
     return (
         <>
             <div className="skills-container">
+                <Header heading={headingData.heading} desc={headingData.desc}/>
                 <div className="category-buttons">
                     <button
                         className={`category-button ${selectedCategory === 'frontend' && 'active'}`}
@@ -65,7 +75,6 @@ const Skills = () => {
                         Other
                     </button>
                 </div>
-
                 <div className="skills-wrapper">
                     {filteredData.map((skill, index) => (
                         <Skill key={index} {...skill} />
@@ -79,110 +88,127 @@ const Skills = () => {
 
 export default Skills;
 
+
 const Data = [
     {
+        title: 'Efficient UI Design',
+        description: 'Design user flows that boost productivity, enhance efficiency, and reduce errors in your business operations.',
+        icon: <AiOutlineRise />,
+        category: 'frontend',
+    },
+    {
         title: 'Security-First Approach',
-        description: 'Implemented security measures such as JWT, Bcrypt, and environment variables to protect against unauthorized access.',
-        icon: <FaLock/>,
+        description: 'Implement advanced security measures, including Web Tokens, encryption, and environment variables, to protect against unauthorized access.',
+        icon: <FaShieldAlt />,
         category: 'backend',
     },
     {
-        title: 'Quick Learner',
-        description: 'Proven ability to rapidly learn and work with new technologies. Experience coding in Java, Python, C#, and JavaScript.',
-        icon: <FaBrain/>,
+        title: 'Client-Centered Development',
+        description: 'Translate business requirements into customized web applications, ensuring seamless operations and user satisfaction.',
+        icon: <FaUsers />,
         category: 'other',
     },
     {
-        title: 'Efficient Solutions',
-        description: 'Crafted digital solutions that enhance efficiency, minimize errors, and boost productivity.',
-        icon: <AiOutlineRise/>,
+        title: 'Database Architecture',
+        description: 'Design and manage relational databases with MySQL and PostgreSQL, ensuring reliable data storage and retrieval.',
+        icon: <FaDatabase />,
+        category: 'backend',
+    },
+    {
+        title: 'Clean Code Practices',
+        description: 'Follow clean code principles by commenting and organizing code for readability and maintainability.',
+        icon: <AiOutlineCode />,
+        category: 'other',
+    },
+    {
+        title: 'Scalable Systems',
+        description: 'Utilize clean architecture principles to ensure seamless scaling and maintainability.',
+        icon: <FaCodeBranch />,
+        category: 'backend',
+    },
+    {
+        title: 'Type Safety with TypeScript',
+        description: 'Leverage TypeScript to provide enterprise-level stability and scalability.',
+        icon: <SiTypescript />,
         category: 'frontend',
     },
     {
-        title: 'Robust Database Design',
-        description: 'Designed relational databases using Postgres, implementing Table per Hierarchy for optimal data organization.',
-        icon: <FaDatabase/>,
+        title: 'Cloud Deployment',
+        description: 'Configure cloud environments for seamless deployment and scalability using AWS.',
+        icon: <FaCloud />,
         category: 'other',
     },
     {
-        title: 'Scalability Ensured',
-        description: 'Followed clean architecture principles to ensure the system is easily maintainable and scalable.',
-        icon: <FaWeightScale/>,
+        title: 'Version Control',
+        description: 'Utilize Git for version control and code pipelines to ensure smooth scaling and collaboration.',
+        icon: <SiGithub />,
+        category: 'other',
+    },
+    {
+        title: 'Efficient ORM with Prisma',
+        description: 'Establish seamless database connections with Prisma ORM, simplifying table mapping and management.',
+        icon: <SiPrisma />,
         category: 'backend',
     },
     {
-        title: 'TypeScript',
-        description: 'Enforced type safety with TypeScript, resulting in a more stable and maintainable codebase.',
-        icon: <SiTypescript/>,
-        category: 'frontend',
-    },
-    {
-        title: 'Seamless Cloud Deployment',
-        description: 'Configured cloud environments for seamless deployment on AWS, ensuring reliability and scalability.',
-        icon: <FaCloud/>,
-        category: 'other',
-    },
-    {
-        title: 'Efficient Version Control',
-        description: 'Utilized Git for version control and efficient code pipeline management.',
-        icon: <SiGithub/>,
-        category: 'other',
-    },
-    {
-        title: 'Streamlined Database Connectivity',
-        description: 'Established seamless connections with databases using Prisma ORM, simplifying table mapping.',
-        icon: <SiPrisma/>,
-        category: 'backend',
-    },
-    {
-        title: 'Java Development',
-        description: 'Learned programming in Java following object-oriented principles and developed paid applications.',
-        icon: <FaJava/>,
+        title: 'Java Development Background',
+        description: 'Leverage a solid foundation in Java programming, adhering to object-oriented principles.',
+        icon: <FaJava />,
         category: 'other',
     },
     {
         title: 'Python Development',
-        description: 'Developed paid Python applications for automating data analysis and organization tailored to specific business needs.',
-        icon: <FaPython/>,
+        description: 'Develop Python applications for automating data analysis and organization.',
+        icon: <FaPython />,
         category: 'other',
     },
     {
+        title: 'Systems Analysis',
+        description: 'Identify and address potential user errors through in-depth business logic mapping.',
+        icon: <FaCog />,  // Use the imported icon
+        category: 'other',
+    },
+
+    {
         title: 'RESTful API Development',
-        description: 'Engineered RESTful APIs with Node.js, Express, and MySQL, ensuring efficient data exchange and communication.',
-        icon: <FaServer/>,
+        description: 'Engineer scalable and maintainable RESTful APIs with clean architecture for seamless integration.',
+        icon: <FaServer />,
         category: 'backend',
     },
     {
-        title: 'GraphQL Development',
-        description: 'Experience developing GraphQL API  with Apollo Server and fetching data from React.',
-        icon: <GrGraphQl />,
+        title: 'GraphQL API Development',
+        description: 'Develop flexible data-fetching solutions using GraphQL APIs with Apollo Server for React applications.',
+        icon: <SiGraphql />,
         category: 'backend',
     },
     {
-        title: 'Styling with Sass/Tailwind CSS',
-        description: 'Styled web applications with Sass and Tailwind CSS, ensuring consistent and visually appealing designs.',
-        icon: <FaSass/>,
+        title: 'Data Analytics and Visualization',
+        description: 'Create dashboards and data visualization tools to help businesses make informed decisions based on their data.',
+        icon: <FaChartBar />,
+        category: 'frontend',
+    },
+    {
+        title: 'Styling with CSS/Sass',
+        description: 'Create visually appealing, responsive, and consistent designs using CSS and Sass.',
+        icon: <FaSass />,
         category: 'frontend',
     },
     {
         title: 'React Development',
-        description: 'Developed web applications with React, utilizing hooks and Redux for state management.',
-        icon: <FaReact/>,
+        description: 'Build professional web applications with React, delivering high-performance user interfaces.',
+        icon: <FaReact />,
         category: 'frontend',
     },
     {
         title: 'Angular Development',
-        description: 'Designed client prototypes with Angular, utilizing its robust libraries to achieve similar functionality.',
-        icon: <FaAngular/>,
+        description: 'Design advanced web applications with Angular to enhance frontend architecture.',
+        icon: <FaAngular />,
         category: 'frontend',
     },
     {
         title: 'Responsive Design Implementation',
-        description: 'Implemented responsive designs using Sass and Tailwind CSS, ensuring optimal user experience across devices.',
-        icon: <FaMobileAlt/>,
+        description: 'Ensure optimal user experience across all devices using responsive design techniques.',
+        icon: <FaMobileAlt />,
         category: 'frontend',
     },
 ];
-
-
-

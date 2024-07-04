@@ -1,19 +1,37 @@
 import './Navbar.scss';
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            if (scrollTop > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
     };
 
     return (
-        <div className="navbar">
+        <div className={`navbar  ${isScrolled ? 'scrolled' : ''}`}>
             <div className="logo">
-                <h2 onClick={() => window.scrollTo(0, 0)}>Vijay Kumar</h2>
+                <h2 onClick={() => window.scrollTo(0, 0)}>VK Studios</h2>
             </div>
             <div className="nav-menu">
                 <ScrollLink to="skills-container" className="nav-link" spy={true} smooth={true} offset={-70} duration={500}>Skills</ScrollLink>

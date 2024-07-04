@@ -2,14 +2,15 @@
 
 .experience-container {
   padding: $spacingMedium;
-  min-height: 100vh;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 
 .experience-wrapper {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  position: relative;
   max-width: $maxWidth;
 
   @media (max-width: 768px) {
@@ -51,27 +52,21 @@
 
   .title {
     font-weight: bold;
-    font-size: 1.2rem;
-    color: $textColor;
+    font-size: 1.5rem;
+    color: $primaryColor;
   }
 
   .year {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $primaryColor;
+    font-weight: normal;
+    color: $textColor;
+    margin-top: -15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
   }
 
   .details {
     color: $textColorLight;
   }
 
-  .details ul {
-    list-style-type: none;
-  }
-
-  .details ul li {
-    margin-bottom: $spacingSmall;
-  }
 }
 
 // responsive
