@@ -1,4 +1,4 @@
-import svgone from "../../assets/images/Meet.svg";
+import svgone from "../../assets/images/meet.svg";
 import svgtwo from "../../assets/images/Frontend.svg";
 import svgthree from "../../assets/images/Cloud.svg";
 import './About.scss';

@@ -2,7 +2,7 @@ import './Contact.scss';
 import {FaGithub} from 'react-icons/fa';
 import {IoLocationOutline, IoMail, IoPhonePortrait, IoDocumentTextOutline} from 'react-icons/io5';
 import resumePDF from '../../assets/resume.pdf';
-import Image from "../../assets/images/Meet.svg";
+import Image from "../../assets/images/meet.svg";
 import {FiSend} from "react-icons/fi";
 
 const Contact = () => {
