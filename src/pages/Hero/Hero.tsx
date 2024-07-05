@@ -42,7 +42,7 @@ const Hero = () => {
                 />
                 <h2 className="hero-title" style={parallaxStyle}>
                     Got a Vision?
-                    With Our Expertise, We'll Build <strong>Your Perfect Business Tool</strong>.
+                    With Our Expertise, I'll Build <strong>Your Perfect Business Tool</strong>.
                 </h2>
             </div>
         </section>

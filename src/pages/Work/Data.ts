@@ -4,7 +4,7 @@ import Users from "../../assets/screenshoots/Users.png";
 import Inventory from "../../assets/screenshoots/Inventory.png";
 import Losses from "../../assets/screenshoots/Losses.png";
 import Upload from "../../assets/screenshoots/Upload.png";
-import Mobile from "../../assets/screenshoots/Mobile.png";
+import Mobile from "../../assets/screenshoots/MobileComp.png";
 import Validation from "../../assets/screenshoots/Validation.png";
 
 export interface WorkSectionData {

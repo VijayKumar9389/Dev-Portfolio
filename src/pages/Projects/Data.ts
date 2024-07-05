@@ -11,7 +11,7 @@ export const projectsData = [
         title: 'OnTract Server',
         description: 'Node/Express API for Triton Public Awareness',
         image: Server,
-        link: 'https://github.com/VijayKumar9389/OnTract-ServerV2.0'
+        link: 'https://github.com/VijayKumar9389/Ontract-Server'
     },
     {
         title: 'OnTract Client',
@@ -23,13 +23,13 @@ export const projectsData = [
         title: 'Inventory Server',
         description: 'Node/Express API for Emerald Inventory',
         image: Server,
-        link: 'https://github.com/VijayKumar9389/OnTract-ServerV2.0' // Consider using a different image if it applies specifically to Inventory
+        link: 'https://github.com/VijayKumar9389/Inventory-Server'
     },
     {
         title: 'Inventory Client',
         description: 'React CMS for Emerald Inventory',
         image: InventoryClient,
-        link: 'https://github.com/VijayKumar9389/OnTract-ClientV2.0'
+        link: 'https://github.com/VijayKumar9389/Inventory-Client'
     },
     {
         title: 'Book Comparison (Python)',
