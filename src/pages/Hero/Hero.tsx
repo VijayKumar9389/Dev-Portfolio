@@ -40,10 +40,10 @@ const Hero = () => {
                     alt="Hero Image"
                     className="hero-image"
                 />
-                <h2 className="hero-title" style={parallaxStyle}>
+                <h1 style={parallaxStyle} className="hero-title">
                     Got a Vision?
-                    With Our Expertise, I'll Build <strong>Your Perfect Business Tool</strong>.
-                </h2>
+                    I Build <strong>Your Perfect Business Tool</strong>.
+                </h1>
             </div>
         </section>
     );

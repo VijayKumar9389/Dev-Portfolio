@@ -1,31 +1,10 @@
 @import "src/styles/theme.scss";
 
-.work-header {
-  padding: 1rem;
-
-  .work-heading-image {
-    width: 100%;
-    max-width: 60vw;
-    height: auto;
-  }
-
-  h1 {
-    color: $textColor;
-    font-size: 2.5em;
-    margin-bottom: $spacingMedium;
-    font-weight: normal;
-  }
-
-  p {
-    color: $textColorLight;
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    max-width: 800px;
-  }
+.work-heading-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
-
 
 .work-container {
   display: flex;
@@ -35,15 +14,6 @@
   padding: $spacingMedium;
   margin: 0 auto;
   gap: $spacingLarge;
-
-  .heading-wrapper {
-    max-width: 1280px;
-    width: 100%;
-
-    h1 {
-      width: 100%;
-    }
-  }
 }
 
 .work-section {
@@ -98,9 +68,7 @@
   grid-area: image; /* Assign grid area for the image */
   box-shadow: $boxShadowHover;
   z-index: 5;
-
 }
-
 
 .work-content {
   display: flex;
@@ -132,15 +100,12 @@
     padding: 0 !important;
   }
 
-  .work-title {
-    width: 100%;
+  h2 {
     font-weight: normal;
-    color: #fff;
   }
 
   .work-info {
     margin-bottom: $spacingMedium;
-    color: $textColorLight;
     font-style: italic;
   }
 
@@ -149,8 +114,12 @@
     padding: $spacingSmall;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     border-radius: $borderRadiusSmall;
-    color: $textColor;
     background-color: $cardBackgroundColor;
+    cursor: default;
+
+    p {
+      color: $textColor !important;
+    }
 
     &:hover {
       border-color: $primaryColor;

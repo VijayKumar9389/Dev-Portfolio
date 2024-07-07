@@ -2,6 +2,7 @@
 
 .app-container {
     background-color: $backgroundColor;
+    color: $textColor;
 
     .app-wrapper {
         display: flex;
@@ -11,14 +12,11 @@
     }
 
     @keyframes bounce {
-        0% {
+        0%, 100% {
             transform: translateY(0);
         }
         50% {
             transform: translateY(-5px); /* Adjust the bounce height */
-        }
-        100% {
-            transform: translateY(0);
         }
     }
 
@@ -28,26 +26,22 @@
     }
 
     p {
-        font-size: 1.1rem;
-    }
-
-    .paragraph {
-        margin-bottom: $spacingLarge;
-        color: $textColor;
-        font-size: 18px;
-        @media (max-width: $mobileBreakpoint) {
-            font-size: 20px;
-        }
+        color: $textColorLight;
+        font-size: 1.2em;
+        line-height: 1.6;
     }
 
     button {
         font-size: 1.25rem;
     }
 
-    h1 {
-        color: #ccc;
-        font-size: 2.5em;
+    h1, h2, h3, h4, h5, h6 {
+        color: $textColor;
         font-weight: normal;
+    }
+
+    h1 {
+        font-size: 2.5em;
     }
 
     h2 {
@@ -56,30 +50,9 @@
 
     h3 {
         font-size: 1.5rem;
-
     }
 
-    h4 {
-
+    h4, h5, h6 {
+        font-size: 1.25rem;
     }
-
-    h5 {
-
-    }
-
-    h6 {
-
-    }
-
-
-
-}
-
-// Paragraphs
-p {
-    font-size: 16px;
-    @media (max-width: $mobileBreakpoint) {
-        font-size: 18px;
-    }
-
 }

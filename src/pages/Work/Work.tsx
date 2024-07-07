@@ -25,7 +25,7 @@ const ProjectSection: React.FC<{ project: WorkData }> = ({project}) => {
                     data-aos="fade-right"
                 />
                 <div className="work-content" data-aos="fade-left">
-                    <h2 className="work-title">{project.title}</h2>
+                    <h2>{project.title}</h2>
                     <p className="work-info">{project.desc}</p>
                     {project.sections.map((section: WorkSectionData, sectionIndex: number) => {
                         return (
@@ -48,13 +48,13 @@ const ProjectSection: React.FC<{ project: WorkData }> = ({project}) => {
 const Work = () => {
     return (
         <div className="work-container">
-            <>
+            <div className="work-heading">
                 <Header
                     heading="Explore My Digital Solutions Powering Real-World Businesses"
                     desc=""
                 />
                 <img src={ImageStorage} alt="Hero Image" data-aos="fade-in" className="work-heading-image"/>
-            </>
+            </div>
             {workData.map((project: WorkData, index: number) => (
                 <ProjectSection key={index} project={project}/>
             ))}

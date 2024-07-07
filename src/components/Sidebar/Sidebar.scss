@@ -1,0 +1,77 @@
+@import 'src/styles/theme.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: $cardBackgroundColor;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: $spacingMedium;
+  border-top-left-radius: $borderRadiusLarge;
+  border-bottom-left-radius: $borderRadiusLarge;
+  box-shadow: $boxShadowHover;
+  max-width: 400px;
+  height: 100vh;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacingMedium 0;
+  list-style: none;
+  text-align: center;
+
+  .modal-link {
+    color: $primaryColor;
+    font-weight: 500;
+    position: relative;
+    margin: $spacingMedium 0;
+    text-decoration: none;
+    padding: $spacingSmall $spacingMedium;
+    border-radius: $borderRadiusLarge;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($cardBackgroundColor, 10%);
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    display: none;
+    border: none;
+    background: transparent;
+
+    svg {
+      margin: 0;
+      color: $textColor;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+      display: block;
+      color: $primaryColor;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}

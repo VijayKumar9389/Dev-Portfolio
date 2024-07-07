@@ -1,11 +1,11 @@
 import './Project.scss';
-import {projectsData} from "./Data.ts";
+import {projectsData} from "./Project.data.ts";
 import Header from "../../components/Header/Header.tsx";
 
 const Project = () => {
     return (
-            <div className="project-container">
-                <Header heading="Resources & Contact" desc=""/>
+        <div className="project-container">
+            <Header heading="Resources & Contact" desc=""/>
             <div className="project-wrapper">
                 {projectsData.map((project, index: number) => (
                     <div className="project-card" key={index}>
@@ -17,7 +17,7 @@ const Project = () => {
                     </div>
                 ))}
             </div>
-            </div>
+        </div>
     );
 };
 

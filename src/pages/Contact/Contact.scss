@@ -14,6 +14,7 @@
   justify-content: center;
   margin: auto;
   max-width: $maxWidth;
+  padding-bottom: 20px;
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr; /* Changed from repeat(1, 1fr) for clarity */
@@ -29,9 +30,8 @@
     text-align: center;
 
     h1 {
-      font-size: 36px;
       margin-bottom: 20px;
-      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     img {
@@ -46,13 +46,6 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
     justify-items: center;
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      width: 100%;
-      color: #fff;
-    }
 
     .contact-item {
       display: flex;
@@ -80,7 +73,7 @@
       }
 
       a {
-        color: $primaryColor;
+        color: $textColor;
         font-size: 16px;
         font-weight: bold;
         transition: all 0.3s ease-in-out;

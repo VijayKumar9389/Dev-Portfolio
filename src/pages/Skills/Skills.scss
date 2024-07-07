@@ -14,7 +14,7 @@
   }
 
   .category-button {
-    background: linear-gradient(to right, #8a2be2, darken(#8a2be2, 10%)); /* Material blue gradient */
+    background: linear-gradient(to right, $primaryColor, darken($primaryColor, 10%)); /* Material blue gradient */
     color: #fff; /* White text color */
     border: none;
     padding: $spacingSmall $spacingMedium;
@@ -41,7 +41,6 @@
       background: #fff; /* White text color */
     }
   }
-
 }
 
 .skills-wrapper{
@@ -49,33 +48,27 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: $spacingLarge;
   margin-bottom: $spacingLarge;
+
+  .skill-card {
+    border-radius: $borderRadiusLarge;
+    padding: $spacingMedium;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $cardBackgroundColor;
+    box-shadow: $boxShadow;
+    text-align: center;
+    border: $border;
+
+    .skill-icon {
+      font-size: 3rem;
+      color: $primaryColor;
+    }
+  }
 }
 
-.skill-card {
-  border-radius: $borderRadiusLarge;
-  padding: $spacingMedium;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: $cardBackgroundColor;
-  box-shadow: $boxShadow;
-  text-align: center;
-  border: $border;
-}
 
-.skill-icon {
-  font-size: 3rem;
-  color: $primaryColor;
-}
 
-.skill-title {
-  font-size: 1.5rem;
-  margin: $spacingSmall 0;
-  color: #fff;
-}
 
-.skill-description {
-  color: $textColorLight;
-}

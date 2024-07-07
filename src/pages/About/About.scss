@@ -43,15 +43,11 @@
     }
 
     h3 {
-      font-size: 1.5rem;
-      margin: $spacingSmall 0;
       color: #fff;
     }
 
-    p {
-      color: $textColorLight;
-      font-size: 1.2em;
-      line-height: 1.6;
+    @media (max-width: $tabletBreakpoint) {
+      padding: $spacingLarge 0;
     }
   }
 
