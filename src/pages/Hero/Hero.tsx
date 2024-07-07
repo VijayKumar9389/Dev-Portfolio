@@ -41,8 +41,7 @@ const Hero = () => {
                     className="hero-image"
                 />
                 <h1 style={parallaxStyle} className="hero-title">
-                    Got a Vision?
-                    I Build <strong>Your Perfect Business Tool</strong>.
+                    Got a Vision? Let's Build <strong>Your Perfect Business Tool</strong>.
                 </h1>
             </div>
         </section>
