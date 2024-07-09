@@ -31,7 +31,7 @@ const Experience: React.FC = () => {
         <div className="experience-container">
             <Header heading={headingData.heading} desc={headingData.desc} />
             <div className="experience-wrapper">
-                {experienceData.map((item: ExperienceItem, index: number) => (
+                {experienceData.map((item: ExperiencweItem, index: number) => (
                     <ExperienceSection key={index} index={index} {...item} />
                 ))}
             </div>
